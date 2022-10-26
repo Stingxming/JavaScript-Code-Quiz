@@ -5,28 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<!-- <header><h1>Coding Quiz</h1></header>
-<main>
-    <section class="quizstart">
-        <p>
-            Answer the questions before the timer runs out!
-        </p>
-    </section>
-</main> -->
 <body>
-    <nav>
-        <p id="viewscoreEl"><a href="https://www.w3schools.com/" class="LinkButtons ">View High Scores </a></p>
-        <p id="viewtime">Time:<span class="timer">40</span></p>
-    </nav>
-    <div class="show">
-        <div>
-            <h4>Code Quiz</h4>
-            <p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-        <button id="start-btn">Start Quiz</button>
-    </div>
+    <header><h1>Code Quiz</h1></header>
+    <main>
+        <section class="gamestart">
+            <p>
+                Answer the questions within the time limit or YOU LOSE.
+            </p>
+            <button id="playgame">START</button>
+        </section>
+        <section class="highscores">
+            <h2>High Scores</h2>
+            <div class="highscores_display"></div>
+            <button class="highscores_restart">RESTART</button>
+            <button class="highscores_clearhighscores">CLEAR SCORE</button>
+        </section>
+        <section class="endgame">
+            <h2>GAME OVER</h2>
+            <p>
+                Your score is: <span class="score"></span></p>
+            <p>
+            <label for="endgame_initials">Enter your initials:</label>
+            <input id="endgame_initials" type="text" placeholder="Your Initials Here">
+            <button class="endgame_submit_initials">SUBMIT</button>
+            </p>
+        </section>
+        <section class="gameboard">
+            <div class="gameboard_timer">Time Left: <span class="gameboard_timeleft"></span></div>
+            <div class="gameboard_questions"></div>
+            <div class="gameboard_answers"></div>
+            <div class="gameboard_results"></div>
+        </section>
+    </main>
     <script src="./assets/js/script.js"></script>
-</body>
+    </body>
 </html>
