@@ -4,6 +4,6 @@ I have to submit this incomplete because I'm still working on it. Eventually I w
 
 ## Github Repo: https://github.com/Stingxming/JavaScript-Code-Quiz
 
-## Deployed-Page: https://stingxming.github.io/JavaScript-Code-Quiz/
+## Deployed-Page: https://stingxming.github.io/JavaScript-Code-Quiz/index.HTML
 
 ### Mini-Project: https://stingxming.github.io/Week4-mini-project/
