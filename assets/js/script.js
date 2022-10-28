@@ -6,7 +6,7 @@ function startQuiz() {
 }
 // 2. start timer
 
-var secondsLeft = 0;
+var secondsLeft = 1000;
 var startQuiz;
 setTime();
 function setTime() {
