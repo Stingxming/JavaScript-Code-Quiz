@@ -2,11 +2,13 @@
 startButtonEl = document.getElementById("playgame");
 startButtonEl.addEventListener("click", startQuiz);
 function startQuiz() {
+  initPrompt();
   console.log("Hello");
+  startTimer();
 }
 // 2. start timer
 
-var secondsLeft = 1000;
+var secondsLeft = 0;
 var startQuiz;
 setTime();
 function setTime() {
@@ -26,9 +28,23 @@ function setTime() {
 
 var questions = [
   {
-    prompt: "What is the color of the sky?",
-    answer: "Blue",
-    choices: ["Blue", "Red", "Yellow", "Green"],
+    prompt: "What is JavaScript",
+    answer: "Language",
+    choices: ["App", "Language", "Coffee", "Website"],
+    prompt: "What is JavaScript used for?",
+    answer: "Logic",
+    choices: ["Networking", "Display", "Connectivity", "Logic"],
+    prompt: "Why is JavaScript Hard for Beginners?",
+    answer: "The syntax is complex",
+    choices: [
+      "It's confusing",
+      "The syntax is complex",
+      "For loops",
+      "Functions",
+    ],
+    prompt: "Who hates JavaScript?",
+    answer: "Mat",
+    choices: ["John", "Dez", "Mat", "Ben"],
   },
 ];
 var score = 0;
@@ -46,5 +62,16 @@ function initPrompt() {
 }
 
 // 4. timer counts down from 5 minutes
+
+timeInt = setInterval(function () {
+  if (timeLeft > 0) {
+    timerEl.textContent = "Time: " + timeLeft;
+    timeLeft--;
+  } else {
+    timerEl.textContent = "";
+    clearInterval(timeInt);
+    stopGame();
+  }
+}, 1000);
 
 // 5. the quiz ends when the timer gets to 0
